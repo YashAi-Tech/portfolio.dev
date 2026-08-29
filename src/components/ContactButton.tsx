@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Copy, Check } from 'lucide-react';
 
 const transitionEase = [0.22, 1, 0.36, 1] as const;
-const EMAIL = 'hello@example.com';
+const EMAIL = 'yash@infusedpath.in';
 
 export const ContactButton: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);

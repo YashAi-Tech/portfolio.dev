@@ -5,41 +5,41 @@ import { Stack } from '../components/Stack';
 import { ConnectCard } from '../components/ConnectCard';
 
 const skills = [
+  'Visual Systems',
+  'Fast Prototypes',
+  'AI-Powered Work',
+  'Frontend Detail',
+  'Product Thinking',
+  'Modern Delivery',
+  'Automation Architecture',
   'UI/UX Design',
-  'Design Systems',
-  'Prototyping & Motion',
-  'Frontend Development',
-  'TypeScript & React',
-  'Interaction Design',
-  'Performance Tuning',
-  'Accessibility',
-  'Visual Identity',
+  'Next.js & React',
 ];
 
 const educationData = [
   {
-    institution: 'Rhode Island School of Design',
-    degree: 'BFA, Graphic Design',
-    period: '2013 – 2017',
-    letter: 'R',
+    institution: 'Automation Architecture',
+    degree: 'n8n & AI Workflow Systems',
+    period: '2026',
+    letter: 'A',
   },
   {
-    institution: 'Stanford University',
-    degree: 'HCI Certificate, d.school',
-    period: '2018',
-    letter: 'S',
+    institution: 'UI/UX & Product Design',
+    degree: 'Design Systems & Conversion',
+    period: '2025',
+    letter: 'D',
   },
   {
-    institution: "Bruno Simon's Three.js Journey",
-    degree: 'WebGL & Shaders',
-    period: '2022',
-    letter: 'B',
+    institution: 'Web & Frontend Development',
+    degree: 'Next.js, TypeScript & React',
+    period: '2024',
+    letter: 'W',
   },
 ];
 
 export const About: React.FC = () => {
   useEffect(() => {
-    document.title = 'About | Portfolio';
+    document.title = 'About | Yash Tonde';
   }, []);
 
   return (
@@ -49,17 +49,17 @@ export const About: React.FC = () => {
         <FadeIn>
           <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3 shadow-sm">
             <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
-              Hello! I’m <span className="border-b border-foreground/30 pb-0.5">Josh Mercer</span>.
+              Hello! I’m <span className="border-b border-foreground/30 pb-0.5">Yash Tonde</span>.
             </h1>
             <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
               <p>
-                A <strong className="font-semibold text-foreground">product designer and frontend engineer</strong> passionate about building intuitive, human-centered digital experiences. With a background in <strong className="font-semibold text-foreground">visual craft</strong> and <strong className="font-semibold text-foreground">interaction design</strong>, I bring a unique blend of design thinking and technical execution to every project.
+                A <strong className="font-semibold text-foreground">Website Designer & UI/UX Designer</strong> combining design thinking, clean code, and AI-powered workflows.
               </p>
               <p>
-                My journey into design began when I realized how often good user experience was missing from powerful tools. That led me to embrace <strong className="font-semibold text-foreground">user-centered design</strong> as both a mindset and a craft, one that balances clarity, creativity, and functionality.
+                As the founder of <strong className="font-semibold text-foreground">InfusedPath</strong> — an automation builder agency — I help startups and brands launch products faster with end-to-end strategy, intelligent workflows, and high-conversion UI/UX design.
               </p>
               <p>
-                Currently leading design at small product teams shipping software for <strong className="font-semibold text-foreground">creative professionals</strong>, I’m always looking for opportunities to <strong className="font-semibold text-foreground">shape thoughtful interfaces and build scalable design systems</strong>.
+                Designing modern digital experiences with creativity and scalable growth systems, I eliminate manual operational overhead so founders can <strong className="font-semibold text-foreground">accelerate time-to-market</strong>.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export const About: React.FC = () => {
             {/* Education */}
             <div className="flex flex-col gap-3">
               <h3 className="text-foreground text-[15px] font-semibold tracking-tight">
-                Education
+                Education & Focus
               </h3>
               <div className="border-foreground/5 bg-foreground/2 dark:bg-foreground/5 relative rounded-4xl border p-2 sm:p-4">
                 <ul className="flex flex-col gap-2">

@@ -10,7 +10,7 @@ import { featuredProjects } from '../data/projects';
 
 export const Home: React.FC = () => {
   useEffect(() => {
-    document.title = 'Home';
+    document.title = 'Yash Tonde — Website Designer & Automation Architect | InfusedPath';
   }, []);
 
   return (
@@ -21,14 +21,14 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8">
             <FadeIn className="flex flex-col gap-4">
               <p className="text-[20px] leading-tight tracking-tight font-medium text-foreground">
-                Hey<span aria-hidden="true" className="mx-0.5">👋</span>, I’m Josh
+                Hello! I Am <span className="font-semibold text-foreground">Yash Tonde</span>
               </p>
               <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
-                <span className="block whitespace-nowrap">Design engineer &</span>
-                <span className="block whitespace-nowrap">AI enthusiast</span>
+                <span className="block whitespace-nowrap">A Designer who</span>
+                <span className="block whitespace-nowrap">Judges a book...</span>
               </h1>
               <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-                Independent engineer focused on interfaces that feel calm, considered, and quietly fast.
+                "Because if the cover does not impress you what else can?" Designing modern digital experiences with creativity, clean code, and AI-powered workflows.
               </p>
               <HeroCtas />
             </FadeIn>
@@ -39,7 +39,7 @@ export const Home: React.FC = () => {
                   <PortraitMorph
                     srcA="/josh.webp"
                     srcB="/josh.webp"
-                    alt="Josh portrait"
+                    alt="Yash portrait"
                     className="h-full w-full"
                   />
                 </div>
@@ -54,10 +54,10 @@ export const Home: React.FC = () => {
         <div className="mx-auto w-full max-w-275 px-6 sm:px-10">
           <FadeIn className="flex flex-col items-center gap-5 pt-12 pb-10 text-center sm:pt-20 sm:pb-14">
             <h2 className="font-serif text-[2.5rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[3rem] lg:text-[3.5rem]">
-              My projects
+              Featured work
             </h2>
             <p className="max-w-[33ch] text-[18px] leading-[1.45] tracking-tight text-foreground/65 sm:text-[20px]">
-              From playful experiments to thoughtful systems, a look at the work I’m proud to have shipped.
+              From product launch automations to thoughtful web systems, a look at the work I’m proud to have shipped.
             </p>
           </FadeIn>
 

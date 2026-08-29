@@ -32,7 +32,7 @@ export const ConnectCard: React.FC = () => {
                   Let’s connect
                 </h2>
                 <p className="max-w-[29ch] text-[18px] leading-[1.4] tracking-tight text-foreground/65 sm:text-[22px] mb-6">
-                  I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Just reach out!
+                  Let's build something amazing together. Have a project in mind? Let's connect.
                 </p>
                 <ContactCardCtas />
               </div>
@@ -42,7 +42,7 @@ export const ConnectCard: React.FC = () => {
                   <a
                     aria-label="Email"
                     className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
-                    href="mailto:hello@example.com"
+                    href="mailto:yash@infusedpath.in"
                   >
                     <Mail className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
                   </a>
@@ -91,10 +91,10 @@ export const ConnectCard: React.FC = () => {
 
                 <div className="flex flex-col items-center gap-1 text-center">
                   <p className="text-[13px] tracking-tight text-foreground/70">
-                    2026 © Built with Next.js
+                    © 2026 Yash Tonde. All rights reserved.
                   </p>
                   <p className="text-[12px] tracking-tight text-foreground/45">
-                    By React Bits Pro
+                    InfusedPath — Automation Builder Agency
                   </p>
                 </div>
               </div>
