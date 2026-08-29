@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
                 <span className="block whitespace-nowrap">Judges a book...</span>
               </h1>
               <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-                "Because if the cover does not impress you what else can?" Designing modern digital experiences with creativity, clean code, and AI-powered workflows.
+                "Because if the cover does not impress you what else can?" Driving app development, product design, and growth at Doearno (2,000+ users).
               </p>
               <HeroCtas />
             </FadeIn>

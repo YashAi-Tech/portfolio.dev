@@ -84,7 +84,7 @@ export const ConnectCard: React.FC = () => {
                     © 2026 Yash Tonde. All rights reserved.
                   </p>
                   <p className="text-[12px] tracking-tight text-foreground/45">
-                    InfusedPath — Automation Builder Agency
+                    Doearno • Product & Growth Lead
                   </p>
                 </div>
               </div>

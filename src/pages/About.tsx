@@ -50,10 +50,10 @@ export const About: React.FC = () => {
                 A <strong className="font-semibold text-foreground">Website Designer & UI/UX Designer</strong> combining design thinking, clean code, and AI-powered workflows.
               </p>
               <p>
-                As the founder of <strong className="font-semibold text-foreground">InfusedPath</strong> — an automation builder agency — I help startups and brands launch products faster with end-to-end strategy, intelligent workflows, and high-conversion UI/UX design.
+                As a Founding Team Member at <strong className="font-semibold text-foreground">Doearno</strong> (Product & Growth Lead), I help drive end-to-end app development, high-conversion product design, and growth strategy, scaling the platform to 2,000+ active users.
               </p>
               <p>
-                Designing modern digital experiences with creativity and scalable growth systems, I eliminate manual operational overhead so founders can <strong className="font-semibold text-foreground">accelerate time-to-market</strong>.
+                Designing modern digital experiences with creativity and scalable growth systems, I combine product thinking, clean frontend engineering, and user lifecycle optimization.
               </p>
             </div>
           </div>
