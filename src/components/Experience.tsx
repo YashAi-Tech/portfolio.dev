@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Sparkles, Palette } from 'lucide-react';
-import { InfusedPathLogo } from './CompanyLogos';
 
 interface ExperienceItem {
   id: string;
@@ -36,21 +35,6 @@ const experienceData: ExperienceItem[] = [
       'Leading cross-functional execution between UI/UX design, engineering, and user lifecycle automation.',
     ],
     skills: ['Product Management', 'Growth Lead', '2,000+ Users Scale', 'User Retention', 'Growth Funnels', 'Product Analytics'],
-  },
-  {
-    id: 'infusedpath',
-    company: 'InfusedPath — Automation Agency',
-    role: 'Founder & Automation Architect',
-    period: 'July 2026 – Present',
-    icon: <InfusedPathLogo className="h-7 w-7 rounded-xl object-contain" />,
-    description:
-      'Founded and direct InfusedPath, an automation builder agency empowering startups and brands with end-to-end product launch automation, strategy, and scalable growth systems.',
-    highlights: [
-      'Architect multi-stage workflow automations connecting CRMs (HubSpot), real-time team alerts (Slack), email campaigns, and analytics tracking.',
-      'Engineer custom AI agents, CLI tooling ($ infusedpath launch --init), and high-conversion modern web interfaces.',
-      'Partner with founders to accelerate time-to-market by eliminating manual operational overhead through intelligent workflow systems.',
-    ],
-    skills: ['Automation Architecture', 'Product Launches', 'n8n', 'AI APIs', 'Next.js', 'HubSpot CRM', 'Webhooks', 'Python'],
   },
   {
     id: 'funngro-bugbash',
