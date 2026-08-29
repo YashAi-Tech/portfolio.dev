@@ -49,7 +49,7 @@ export const About: React.FC = () => {
         <FadeIn>
           <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3 shadow-sm">
             <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
-              Hello! I’m <span className="border-b border-foreground/30 pb-0.5">Yash Tonde</span>.
+              Hello! I’m <span className="border-b border-foreground/30 pb-0.5">Yash</span>.
             </h1>
             <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
               <p>

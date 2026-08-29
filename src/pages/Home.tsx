@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8">
             <FadeIn className="flex flex-col gap-4">
               <p className="text-[20px] leading-tight tracking-tight font-medium text-foreground">
-                Hello! I Am <span className="font-semibold text-foreground">Yash Tonde</span>
+                Hey<span aria-hidden="true" className="mx-0.5">👋</span>, I’m Yash
               </p>
               <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
                 <span className="block whitespace-nowrap">A Designer who</span>
