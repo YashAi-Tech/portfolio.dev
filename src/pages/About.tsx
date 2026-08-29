@@ -18,22 +18,10 @@ const skills = [
 
 const educationData = [
   {
-    institution: 'Automation Architecture',
-    degree: 'n8n & AI Workflow Systems',
-    period: '2026',
-    letter: 'A',
-  },
-  {
-    institution: 'UI/UX & Product Design',
-    degree: 'Design Systems & Conversion',
-    period: '2025',
-    letter: 'D',
-  },
-  {
-    institution: 'Web & Frontend Development',
-    degree: 'Next.js, TypeScript & React',
-    period: '2024',
-    letter: 'W',
+    institution: 'Baliram Patil Vidyalaya',
+    degree: '10th • Grade: 80%',
+    period: 'May 2023 – Apr 2026',
+    letter: 'B',
   },
 ];
 
