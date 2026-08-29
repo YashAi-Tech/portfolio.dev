@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yash.infusedpath.in/sitemap.xml
