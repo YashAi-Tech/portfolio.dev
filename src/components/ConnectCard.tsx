@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Github } from 'lucide-react';
 import { ContactCardCtas } from './ContactCardCtas';
 import { FadeIn } from './FadeIn';
 
@@ -45,6 +45,15 @@ export const ConnectCard: React.FC = () => {
                     href="mailto:hello@example.com"
                   >
                     <Mail className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
+                  </a>
+                  <a
+                    aria-label="GitHub"
+                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/YashAi-Tech"
+                  >
+                    <Github className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
                   </a>
                   <a
                     aria-label="LinkedIn"
