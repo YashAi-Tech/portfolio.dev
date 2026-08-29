@@ -3,11 +3,13 @@ import React from 'react';
 export const SiteFrame: React.FC = () => {
   return (
     <>
-      {/* Top-left curved cutout */}
+      <div className="site-frame site-frame--top" aria-hidden="true" />
+      <div className="site-frame site-frame--left" aria-hidden="true" />
+      <div className="site-frame site-frame--right" aria-hidden="true" />
       <svg
         className="site-corner site-corner--top-left"
-        width="40"
-        height="40"
+        width="50"
+        height="50"
         viewBox="0 0 50 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -18,12 +20,10 @@ export const SiteFrame: React.FC = () => {
           fill="currentColor"
         />
       </svg>
-
-      {/* Top-right curved cutout */}
       <svg
         className="site-corner site-corner--top-right"
-        width="40"
-        height="40"
+        width="50"
+        height="50"
         viewBox="0 0 50 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

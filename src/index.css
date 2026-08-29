@@ -57,7 +57,35 @@ html[data-theme-anim="1"]::view-transition-old(root) {
   }
 }
 
-/* Site Top Corners */
+/* Site Frame and Corners */
+.site-frame {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  background-color: hsl(var(--background));
+}
+
+.site-frame--top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.site-frame--left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+}
+
+.site-frame--right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+}
+
 .site-corner {
   position: fixed;
   z-index: 40;
@@ -66,13 +94,13 @@ html[data-theme-anim="1"]::view-transition-old(root) {
 }
 
 .site-corner--top-left {
-  top: 0;
-  left: 0;
+  top: 12px;
+  left: 12px;
 }
 
 .site-corner--top-right {
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 12px;
   transform: scaleX(-1);
 }
 
