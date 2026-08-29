@@ -12,6 +12,7 @@ interface ExperienceEntry {
 
 const experienceData: ExperienceEntry[] = [
   { company: 'InfusedPath — Automation Agency', role: 'Founder & Automation Architect', period: 'July 2026 – Present', brand: '#6366F1' },
+  { company: 'Doearno', role: 'Founding Team Member — Product & Growth Lead', period: '2026 – Present', brand: '#059669' },
   { company: 'Funngro', role: 'Bug Bash Expert (Internship)', period: 'April 2026 – Present', brand: '#10B981' },
   { company: 'Funngro', role: 'Clan Leader (Part-time)', period: 'Feb 2026 – Present', brand: '#3B82F6' },
   { company: 'Funngro', role: 'Expert (Part-time)', period: 'Mar 2026 – May 2026', brand: '#F59E0B' },
