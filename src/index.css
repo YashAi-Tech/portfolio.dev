@@ -25,6 +25,38 @@
   }
 }
 
+/* Circular Wave View Transition Animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-theme-anim="1"]::view-transition-new(root) {
+  z-index: 99999;
+  animation: 0.75s cubic-bezier(0.22, 1, 0.36, 1) both theme-reveal;
+}
+
+html[data-theme-anim="1"]::view-transition-old(root) {
+  z-index: 1;
+  animation: none;
+}
+
+@keyframes theme-reveal {
+  0% {
+    clip-path: circle(0px at var(--theme-cx, 50%) var(--theme-cy, 50%));
+  }
+  100% {
+    clip-path: circle(var(--theme-r, 100vmax) at var(--theme-cx, 50%) var(--theme-cy, 50%));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme-anim="1"]::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 /* Site Frame and Corners */
 .site-frame {
   position: fixed;
