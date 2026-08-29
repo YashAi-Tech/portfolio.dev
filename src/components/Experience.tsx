@@ -61,7 +61,7 @@ const experienceData: ExperienceItem[] = [
       <img
         src="/funngro.png"
         alt="Funngro logo"
-        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        className="h-8 w-8 rounded-full object-cover shadow-2xs"
         draggable={false}
       />
     ),
@@ -82,7 +82,7 @@ const experienceData: ExperienceItem[] = [
       <img
         src="/funngro.png"
         alt="Funngro logo"
-        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        className="h-8 w-8 rounded-full object-cover shadow-2xs"
         draggable={false}
       />
     ),
@@ -103,7 +103,7 @@ const experienceData: ExperienceItem[] = [
       <img
         src="/funngro.png"
         alt="Funngro logo"
-        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        className="h-8 w-8 rounded-full object-cover shadow-2xs"
         draggable={false}
       />
     ),
