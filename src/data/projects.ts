@@ -7,24 +7,26 @@ export interface Project {
   roleAndYear: string;
   image: string;
   aspectRatio: number;
+  url?: string;
 }
 
 export const allProjects: Project[] = [
   {
-    id: 'infusedpath',
-    name: 'InfusedPath',
+    id: 'aetrixa',
+    name: 'Aetrixa',
     iconName: 'sparkles',
-    headline: 'InfusedPath — Product Launch & Business Automation Agency',
-    description: 'An end-to-end automation builder agency helping startups and brands launch products faster through streamlined strategy, workflow automation, and scalable growth systems.',
-    roleAndYear: 'Founder & Lead, 2026',
-    image: 'https://cdn.dribbble.com/userupload/46128964/file/b92b9d268dd928642ca94bd49e32923a.jpg?resize=752x497&vertical=center',
-    aspectRatio: 1.513,
+    headline: 'Aetrixa 2.0 — Next-Gen Tech Agency Landing Page',
+    description: 'High-conversion, dynamic landing page designed and engineered for Aetrixa. Built with Next.js, bespoke AI systems showcase, high-performance web architecture, and modern micro-interactions.',
+    roleAndYear: 'Website Designer & Lead, 2026',
+    image: '/aetrixa.png',
+    aspectRatio: 1.777,
+    url: 'https://web-nine-xi-48.vercel.app/',
   },
   {
     id: 'infusedpath-cli',
-    name: 'InfusedPath CLI Tooling',
+    name: 'CLI Tooling & Automations',
     iconName: 'compass',
-    headline: 'Custom AI growth agents, automated reporting, and CLI launch tooling ($ infusedpath launch --init).',
+    headline: 'Custom AI growth agents, automated reporting, and CLI launch tooling ($ launch --init).',
     description: 'Multi-stage launch playbooks, automated waitlists, and campaign event triggers with developer-first CLI tooling.',
     roleAndYear: 'Automation Architect, 2026',
     image: 'https://cdn.dribbble.com/userupload/24599416/file/original-1ae5075dcd129aebb16bdbca24b41ac7.png?resize=1024x768&vertical=center',
@@ -61,15 +63,16 @@ export const allProjects: Project[] = [
     aspectRatio: 1.333,
   },
   {
-    id: 'in-progress',
-    name: 'New Client Work & Labs',
+    id: 'labs-in-progress',
+    name: 'In Progress Labs',
     iconName: 'bot',
-    headline: 'New client work and personal projects currently in development.',
-    description: 'Stay tuned for exciting case studies, live project deployments, and open-source automation tools.',
-    roleAndYear: 'In Progress, 2026',
-    image: 'https://cdn.dribbble.com/userupload/16560717/file/original-c6f745d50302d66609bfe080f99f5396.png?resize=1024x768&vertical=center',
+    headline: 'Explorations in WebGL shaders, 2D physics interactions, and autonomous agent workflows.',
+    description: 'Interactive canvas experiments, fluid dynamics simulations, and novel interaction primitives.',
+    roleAndYear: 'Creative Technologist, 2026',
+    image: 'https://cdn.dribbble.com/userupload/46045865/file/857e3f848a60bc4b92b67f1011400d98.png?resize=1024x768&vertical=center',
     aspectRatio: 1.333,
   },
 ];
 
 export const featuredProjects = allProjects.slice(0, 4);
+
