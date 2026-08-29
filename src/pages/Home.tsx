@@ -24,11 +24,11 @@ export const Home: React.FC = () => {
                 Hey<span aria-hidden="true" className="mx-0.5">👋</span>, I’m Yash
               </p>
               <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
-                <span className="block whitespace-nowrap">A Designer who</span>
-                <span className="block whitespace-nowrap">Judges a book...</span>
+                <span className="block whitespace-nowrap">Designer by craft.</span>
+                <span className="block whitespace-nowrap">Builder by nature.</span>
               </h1>
-              <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-                "Because if the cover does not impress you what else can?" Driving app development, product design, and growth at Doearno (2,000+ users).
+              <p className="max-w-[34ch] text-[20px] leading-[1.4] tracking-tight text-foreground/65 sm:text-[22px]">
+                Product Designer & Growth Lead at Doearno. Bridging high-end aesthetics, clean code, and rapid product scale.
               </p>
               <HeroCtas />
             </FadeIn>
