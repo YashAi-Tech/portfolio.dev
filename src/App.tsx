@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from './components/ThemeProvider';
 import { SmoothScroll } from './components/SmoothScroll';
 import { Nav } from './components/Nav';
@@ -41,6 +42,9 @@ export const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Home />} />
           </Routes>
+
+          {/* Vercel Analytics */}
+          <Analytics />
         </BrowserRouter>
       </SmoothScroll>
     </ThemeProvider>
