@@ -18,6 +18,12 @@ const skills = [
 
 const educationData = [
   {
+    institution: 'MIT',
+    degree: 'Diploma in Computer Science (2nd Year)',
+    period: '2024 – Present',
+    letter: 'M',
+  },
+  {
     institution: 'Baliram Patil Vidyalaya',
     degree: '10th • Grade: 80%',
     period: 'May 2023 – Apr 2026',
