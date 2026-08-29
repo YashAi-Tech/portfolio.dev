@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './components/ThemeProvider';
 import { SmoothScroll } from './components/SmoothScroll';
+import { SiteFrame } from './components/SiteFrame';
 import { Nav } from './components/Nav';
 import { ShaderFlow } from './components/ShaderFlow';
 import { Home } from './pages/Home';
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
       <SmoothScroll>
         <BrowserRouter>
           <ScrollToTop />
+          <SiteFrame />
 
           {/* Background Shader */}
           <div

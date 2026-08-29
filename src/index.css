@@ -57,6 +57,53 @@ html[data-theme-anim="1"]::view-transition-old(root) {
   }
 }
 
+/* Site Frame and Corners */
+.site-frame {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  background-color: hsl(var(--background));
+}
+
+.site-frame--top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.site-frame--left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+}
+
+.site-frame--right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+}
+
+.site-corner {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  color: hsl(var(--background));
+}
+
+.site-corner--top-left {
+  top: 12px;
+  left: 12px;
+}
+
+.site-corner--top-right {
+  top: 12px;
+  right: 12px;
+  transform: scaleX(-1);
+}
+
 /* Project Card interactive hover */
 .project-card {
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
