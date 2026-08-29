@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github } from 'lucide-react';
+import { Mail, Github, Linkedin, Globe } from 'lucide-react';
 import { ContactCardCtas } from './ContactCardCtas';
 import { FadeIn } from './FadeIn';
 
@@ -38,54 +38,44 @@ export const ConnectCard: React.FC = () => {
               </div>
 
               <div className="border-foreground/8 flex flex-col items-center justify-center gap-6 rounded-[1.1rem] border bg-background p-6 sm:p-8">
-                <div className="flex items-center gap-3 opacity-75">
+                <div className="flex items-center gap-3 opacity-80">
                   <a
                     aria-label="Email"
-                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
+                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/5 shadow-2xs"
                     href="mailto:yash@infusedpath.in"
+                    title="Email Yash"
                   >
-                    <Mail className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
+                    <Mail className="h-4 w-4" strokeWidth={2.2} aria-hidden="true" />
                   </a>
                   <a
                     aria-label="GitHub"
-                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
+                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/5 shadow-2xs"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/YashAi-Tech"
+                    title="GitHub Profile"
                   >
-                    <Github className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
+                    <Github className="h-4 w-4" strokeWidth={2.2} aria-hidden="true" />
                   </a>
                   <a
                     aria-label="LinkedIn"
-                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
+                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/5 shadow-2xs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/yash-tonde-157666415/"
+                    title="LinkedIn Profile"
                   >
-                    <img
-                      src="/linkedin.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width={14}
-                      height={14}
-                      className="max-h-[14px] max-w-[14px] object-contain dark:invert"
-                    />
+                    <Linkedin className="h-4 w-4" strokeWidth={2.2} aria-hidden="true" />
                   </a>
                   <a
-                    aria-label="X"
-                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground"
+                    aria-label="InfusedPath Website"
+                    className="border-foreground/8 hover:border-foreground/15 focus-ring inline-flex h-11 w-11 items-center justify-center rounded-xl border bg-background text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/5 shadow-2xs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://x.com"
+                    href="https://infusedpath.in"
+                    title="InfusedPath Agency"
                   >
-                    <img
-                      src="/x.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width={14}
-                      height={14}
-                      className="max-h-[14px] max-w-[14px] object-contain dark:invert"
-                    />
+                    <Globe className="h-4 w-4" strokeWidth={2.2} aria-hidden="true" />
                   </a>
                 </div>
 

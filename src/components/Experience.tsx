@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ExternalLink, Sparkles, TrendingUp, Zap, Bug, Users, Award, Palette } from 'lucide-react';
+import { ChevronDown, Sparkles, Palette } from 'lucide-react';
+import { InfusedPathLogo } from './CompanyLogos';
 
 interface ExperienceItem {
   id: string;
   company: string;
   role: string;
   period: string;
-  brand: string;
   icon: React.ReactNode;
   description: string;
   highlights: string[];
   skills: string[];
-  link?: string;
-  linkLabel?: string;
 }
 
 const experienceData: ExperienceItem[] = [
@@ -22,8 +20,14 @@ const experienceData: ExperienceItem[] = [
     company: 'Doearno',
     role: 'Founding Team Member — Product & Growth Lead',
     period: '2026 – Present',
-    brand: '#059669',
-    icon: <TrendingUp className="h-4 w-4 text-emerald-400" />,
+    icon: (
+      <img
+        src="/doearno.png"
+        alt="Doearno logo"
+        className="h-8 w-8 rounded-xl object-contain shadow-2xs"
+        draggable={false}
+      />
+    ),
     description:
       'Spearheading product strategy and growth architecture at Doearno, scaling the platform to 2,000+ active users with high-retention onboarding funnels.',
     highlights: [
@@ -38,8 +42,7 @@ const experienceData: ExperienceItem[] = [
     company: 'InfusedPath — Automation Agency',
     role: 'Founder & Automation Architect',
     period: 'July 2026 – Present',
-    brand: '#6366F1',
-    icon: <Zap className="h-4 w-4 text-indigo-400" />,
+    icon: <InfusedPathLogo className="h-7 w-7 rounded-xl object-contain" />,
     description:
       'Founded and direct InfusedPath, an automation builder agency empowering startups and brands with end-to-end product launch automation, strategy, and scalable growth systems.',
     highlights: [
@@ -48,16 +51,20 @@ const experienceData: ExperienceItem[] = [
       'Partner with founders to accelerate time-to-market by eliminating manual operational overhead through intelligent workflow systems.',
     ],
     skills: ['Automation Architecture', 'Product Launches', 'n8n', 'AI APIs', 'Next.js', 'HubSpot CRM', 'Webhooks', 'Python'],
-    link: 'https://infusedpath.in',
-    linkLabel: 'InfusedPath Live',
   },
   {
     id: 'funngro-bugbash',
     company: 'Funngro',
     role: 'Bug Bash Expert (Internship)',
     period: 'Apr 2026 – Jul 2026 · 4 mos',
-    brand: '#3B82F6',
-    icon: <Bug className="h-4 w-4 text-blue-400" />,
+    icon: (
+      <img
+        src="/funngro.png"
+        alt="Funngro logo"
+        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        draggable={false}
+      />
+    ),
     description:
       'Reviewed and validated 1,200+ user-reported bugs on the Bug Bash platform across multiple web and mobile applications.',
     highlights: [
@@ -65,16 +72,20 @@ const experienceData: ExperienceItem[] = [
       'Contributed directly to product quality improvements through accurate, reproducible bug reporting and testing workflows.',
     ],
     skills: ['Bug Bash Expert', 'Bug Tracking', 'Quality Assurance', 'Manual Testing', 'Documentation'],
-    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/Position/2938000752/treasury/?profileId=ACoAAGmjZ1MBM0OPQCbyhUSRBAtuttP4r10TI_o',
-    linkLabel: 'Bug Bash Dashboard',
   },
   {
     id: 'funngro-clanleader',
     company: 'Funngro',
     role: 'Clan Leader (Part-time)',
     period: 'Feb 2026 – Jul 2026 · 6 mos',
-    brand: '#F59E0B',
-    icon: <Users className="h-4 w-4 text-amber-400" />,
+    icon: (
+      <img
+        src="/funngro.png"
+        alt="Funngro logo"
+        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        draggable={false}
+      />
+    ),
     description:
       'Led and mentored a community of 1,000+ users throughout project participation, onboarding, and milestone completion.',
     highlights: [
@@ -82,16 +93,20 @@ const experienceData: ExperienceItem[] = [
       'Resolved user queries rapidly and improved community retention through structured support channels.',
     ],
     skills: ['Communication', 'Team Leadership', 'Community Management', 'Mentorship'],
-    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/2937798522/skill-associations-details/',
-    linkLabel: 'Leadership Credential',
   },
   {
     id: 'funngro-expert',
     company: 'Funngro',
     role: 'Expert (Part-time)',
     period: 'Mar 2026 – May 2026 · 3 mos',
-    brand: '#EC4899',
-    icon: <Award className="h-4 w-4 text-pink-400" />,
+    icon: (
+      <img
+        src="/funngro.png"
+        alt="Funngro logo"
+        className="h-8 w-8 rounded-xl object-contain shadow-2xs bg-black"
+        draggable={false}
+      />
+    ),
     description:
       'Assisted users by resolving technical and project-related queries, helping them successfully complete client projects.',
     highlights: [
@@ -99,16 +114,17 @@ const experienceData: ExperienceItem[] = [
       'Ensured a smooth user experience through effective communication and timely problem-solving.',
     ],
     skills: ['Technical Support', 'Problem Solving', 'Project Guidance', 'Communication'],
-    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/Position/2938018056/treasury/?profileId=ACoAAGmjZ1MBM0OPQCbyhUSRBAtuttP4r10TI_o',
-    linkLabel: 'Expert Certification',
   },
   {
     id: 'website-designer',
     company: 'Website & UI/UX Design',
     role: 'Designer & Developer',
     period: '2024 – Present',
-    brand: '#8B5CF6',
-    icon: <Palette className="h-4 w-4 text-purple-400" />,
+    icon: (
+      <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-purple-600/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400">
+        <Palette className="h-4 w-4" />
+      </span>
+    ),
     description:
       'Designing modern digital experiences with creativity, clean code, and AI-powered workflows for high-conversion brands.',
     highlights: [
@@ -167,7 +183,7 @@ export const Experience: React.FC = () => {
                 >
                   <div className="flex items-center gap-3.5 min-w-0">
                     <span
-                      className="ring-foreground/8 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white shadow-2xs ring-1 dark:bg-foreground/5 dark:ring-white/10"
+                      className="ring-foreground/8 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white shadow-2xs ring-1 dark:bg-foreground/5 dark:ring-white/10 overflow-hidden"
                       aria-hidden="true"
                     >
                       {item.icon}
@@ -237,30 +253,16 @@ export const Experience: React.FC = () => {
                           </ul>
                         </div>
 
-                        {/* Skills and Link */}
-                        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-1">
-                          <div className="flex flex-wrap gap-1.5">
-                            {item.skills.map((skill) => (
-                              <span
-                                key={skill}
-                                className="inline-flex items-center rounded-lg bg-foreground/5 px-2.5 py-1 text-[11px] font-medium text-foreground/80 border border-foreground/6"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-
-                          {item.link && (
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="focus-ring inline-flex items-center gap-1.5 rounded-xl bg-foreground px-3.5 py-1.5 text-[12px] font-medium text-background transition-opacity hover:opacity-90 shadow-2xs"
+                        {/* Skills */}
+                        <div className="mt-4 flex flex-wrap gap-1.5 pt-1">
+                          {item.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="inline-flex items-center rounded-lg bg-foreground/5 px-2.5 py-1 text-[11px] font-medium text-foreground/80 border border-foreground/6"
                             >
-                              <span>{item.linkLabel || 'View Proof'}</span>
-                              <ExternalLink className="h-3 w-3" />
-                            </a>
-                          )}
+                              {skill}
+                            </span>
+                          ))}
                         </div>
                       </div>
                     </motion.div>
