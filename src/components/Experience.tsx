@@ -1,132 +1,288 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ExternalLink, Sparkles, TrendingUp, Zap, Bug, Users, Award, Palette } from 'lucide-react';
 
-interface ExperienceEntry {
+interface ExperienceItem {
+  id: string;
   company: string;
   role: string;
   period: string;
-  slug?: string;
   brand: string;
+  icon: React.ReactNode;
+  description: string;
+  highlights: string[];
+  skills: string[];
+  link?: string;
+  linkLabel?: string;
 }
 
-const experienceData: ExperienceEntry[] = [
-  { company: 'InfusedPath — Automation Agency', role: 'Founder & Automation Architect', period: 'July 2026 – Present', brand: '#6366F1' },
-  { company: 'Doearno', role: 'Founding Team Member — Product & Growth Lead', period: '2026 – Present', brand: '#059669' },
-  { company: 'Funngro', role: 'Bug Bash Expert (Internship)', period: 'April 2026 – Present', brand: '#10B981' },
-  { company: 'Funngro', role: 'Clan Leader (Part-time)', period: 'Feb 2026 – Present', brand: '#3B82F6' },
-  { company: 'Funngro', role: 'Expert (Part-time)', period: 'Mar 2026 – May 2026', brand: '#F59E0B' },
-  { company: 'Website & UI/UX Design', role: 'Designer & Developer', period: '2024 – Present', brand: '#8B5CF6' },
+const experienceData: ExperienceItem[] = [
+  {
+    id: 'doearno',
+    company: 'Doearno',
+    role: 'Founding Team Member — Product & Growth Lead',
+    period: '2026 – Present',
+    brand: '#059669',
+    icon: <TrendingUp className="h-4 w-4 text-emerald-400" />,
+    description:
+      'Spearheading product strategy and growth architecture at Doearno, scaling the platform to 2,000+ active users with high-retention onboarding funnels.',
+    highlights: [
+      'Managing 2,000+ active users across core product workflows and community growth initiatives.',
+      'Driving full-funnel product metrics: acquisition, activation, retention, and viral referral loops.',
+      'Leading cross-functional execution between UI/UX design, engineering, and user lifecycle automation.',
+    ],
+    skills: ['Product Management', 'Growth Lead', '2,000+ Users Scale', 'User Retention', 'Growth Funnels', 'Product Analytics'],
+  },
+  {
+    id: 'infusedpath',
+    company: 'InfusedPath — Automation Agency',
+    role: 'Founder & Automation Architect',
+    period: 'July 2026 – Present',
+    brand: '#6366F1',
+    icon: <Zap className="h-4 w-4 text-indigo-400" />,
+    description:
+      'Founded and direct InfusedPath, an automation builder agency empowering startups and brands with end-to-end product launch automation, strategy, and scalable growth systems.',
+    highlights: [
+      'Architect multi-stage workflow automations connecting CRMs (HubSpot), real-time team alerts (Slack), email campaigns, and analytics tracking.',
+      'Engineer custom AI agents, CLI tooling ($ infusedpath launch --init), and high-conversion modern web interfaces.',
+      'Partner with founders to accelerate time-to-market by eliminating manual operational overhead through intelligent workflow systems.',
+    ],
+    skills: ['Automation Architecture', 'Product Launches', 'n8n', 'AI APIs', 'Next.js', 'HubSpot CRM', 'Webhooks', 'Python'],
+    link: 'https://infusedpath.in',
+    linkLabel: 'InfusedPath Live',
+  },
+  {
+    id: 'funngro-bugbash',
+    company: 'Funngro',
+    role: 'Bug Bash Expert (Internship)',
+    period: 'Apr 2026 – Jul 2026 · 4 mos',
+    brand: '#3B82F6',
+    icon: <Bug className="h-4 w-4 text-blue-400" />,
+    description:
+      'Reviewed and validated 1,200+ user-reported bugs on the Bug Bash platform across multiple web and mobile applications.',
+    highlights: [
+      'Reproduced software issues and verified bug authenticity through systematic testing across edge-case scenarios.',
+      'Contributed directly to product quality improvements through accurate, reproducible bug reporting and testing workflows.',
+    ],
+    skills: ['Bug Bash Expert', 'Bug Tracking', 'Quality Assurance', 'Manual Testing', 'Documentation'],
+    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/Position/2938000752/treasury/?profileId=ACoAAGmjZ1MBM0OPQCbyhUSRBAtuttP4r10TI_o',
+    linkLabel: 'Bug Bash Dashboard',
+  },
+  {
+    id: 'funngro-clanleader',
+    company: 'Funngro',
+    role: 'Clan Leader (Part-time)',
+    period: 'Feb 2026 – Jul 2026 · 6 mos',
+    brand: '#F59E0B',
+    icon: <Users className="h-4 w-4 text-amber-400" />,
+    description:
+      'Led and mentored a community of 1,000+ users throughout project participation, onboarding, and milestone completion.',
+    highlights: [
+      'Guided 1,000+ members during onboarding and project completion with proactive mentorship and communication.',
+      'Resolved user queries rapidly and improved community retention through structured support channels.',
+    ],
+    skills: ['Communication', 'Team Leadership', 'Community Management', 'Mentorship'],
+    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/2937798522/skill-associations-details/',
+    linkLabel: 'Leadership Credential',
+  },
+  {
+    id: 'funngro-expert',
+    company: 'Funngro',
+    role: 'Expert (Part-time)',
+    period: 'Mar 2026 – May 2026 · 3 mos',
+    brand: '#EC4899',
+    icon: <Award className="h-4 w-4 text-pink-400" />,
+    description:
+      'Assisted users by resolving technical and project-related queries, helping them successfully complete client projects.',
+    highlights: [
+      'Provided expert guidance to ensure members met project deliverables with high quality and on-time delivery.',
+      'Ensured a smooth user experience through effective communication and timely problem-solving.',
+    ],
+    skills: ['Technical Support', 'Problem Solving', 'Project Guidance', 'Communication'],
+    link: 'https://www.linkedin.com/in/yash-tonde-157666415/overlay/Position/2938018056/treasury/?profileId=ACoAAGmjZ1MBM0OPQCbyhUSRBAtuttP4r10TI_o',
+    linkLabel: 'Expert Certification',
+  },
+  {
+    id: 'website-designer',
+    company: 'Website & UI/UX Design',
+    role: 'Designer & Developer',
+    period: '2024 – Present',
+    brand: '#8B5CF6',
+    icon: <Palette className="h-4 w-4 text-purple-400" />,
+    description:
+      'Designing modern digital experiences with creativity, clean code, and AI-powered workflows for high-conversion brands.',
+    highlights: [
+      'Crafting refined design systems, interactive prototypes, and responsive frontend applications.',
+      'Balancing brand storytelling, clean UI language, and polished micro-interactions.',
+    ],
+    skills: ['UI/UX Design', 'Design Systems', 'Next.js & React', 'Tailwind CSS', 'Framer Motion'],
+  },
 ];
 
 const transitionEase = [0.22, 1, 0.36, 1] as const;
 
 export const Experience: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const collapsedHeight = 64 * 2 + 8 * 2 + 32; // ~176px
-  const remainingCount = experienceData.length - 2;
+  const [expandedId, setExpandedId] = useState<string | null>('doearno');
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleItems = showAll ? experienceData : experienceData.slice(0, 4);
+
+  const toggleItem = (id: string) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-foreground text-[15px] font-semibold tracking-tight">
-        Experience
-      </h3>
-      <div
-        className={`border-foreground/5 bg-foreground/2 dark:bg-foreground/5 relative overflow-hidden rounded-4xl border px-2 pt-2 sm:px-4 sm:pt-4 ${
-          isExpanded ? 'pb-2 sm:pb-4' : 'pb-0'
-        }`}
-      >
-        <motion.div
-          className="relative"
-          initial={false}
-          animate={{ height: isExpanded ? 'auto' : collapsedHeight }}
-          transition={{ duration: 0.5, ease: transitionEase }}
-          style={{ overflow: 'hidden' }}
-        >
-          <ul className="flex flex-col gap-2">
-            {experienceData.map((item) => (
-              <li
-                key={`${item.company}-${item.period}`}
-                className="bg-background border-foreground/5 flex items-center gap-4 rounded-3xl border p-2"
-                style={{ minHeight: 64 }}
+      <div className="flex items-center justify-between">
+        <h3 className="text-foreground text-[15px] font-semibold tracking-tight">
+          Experience
+        </h3>
+        <span className="text-[12px] text-foreground/50">
+          Click any role to explore details
+        </span>
+      </div>
+
+      <div className="border-foreground/5 bg-foreground/2 dark:bg-foreground/5 relative overflow-hidden rounded-4xl border p-2 sm:p-4">
+        <ul className="flex flex-col gap-2.5">
+          {visibleItems.map((item) => {
+            const isOpen = expandedId === item.id;
+
+            return (
+              <motion.li
+                key={item.id}
+                layout
+                transition={{ duration: 0.35, ease: transitionEase }}
+                className={`bg-background border-foreground/5 relative overflow-hidden rounded-3xl border transition-all duration-300 ${
+                  isOpen
+                    ? 'ring-1 ring-foreground/15 shadow-sm'
+                    : 'hover:border-foreground/12 hover:bg-background/90'
+                }`}
               >
-                <span
-                  className="ring-foreground/8 inline-flex h-12 w-12 shrink-0 items-center justify-center bg-white ring-1 dark:ring-white/10"
-                  aria-hidden="true"
-                  style={{
-                    borderRadius: 14,
-                    ...(item.slug ? {} : { backgroundColor: item.brand }),
-                  }}
+                {/* Header button to expand */}
+                <button
+                  type="button"
+                  onClick={() => toggleItem(item.id)}
+                  aria-expanded={isOpen}
+                  className="flex w-full cursor-pointer items-center justify-between gap-3 p-3 text-left sm:p-4 focus:outline-none select-none"
                 >
-                  {item.slug ? (
-                    <img
-                      src={`https://cdn.simpleicons.org/${item.slug}`}
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="h-6 w-6"
-                      draggable={false}
-                    />
-                  ) : (
-                    <span className="text-[18px] font-semibold tracking-tight text-white">
-                      {item.company.charAt(0)}
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    <span
+                      className="ring-foreground/8 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white shadow-2xs ring-1 dark:bg-foreground/5 dark:ring-white/10"
+                      aria-hidden="true"
+                    >
+                      {item.icon}
                     </span>
+
+                    <div className="flex min-w-0 flex-col">
+                      <span className="text-foreground text-[16px] font-semibold tracking-tight sm:text-[17px] truncate">
+                        {item.company}
+                      </span>
+                      <span className="text-foreground/65 mt-0.5 text-[13px] tracking-tight sm:text-[14px] truncate">
+                        {item.role}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 shrink-0">
+                    <span className="text-foreground/50 text-[12px] font-medium tracking-tight sm:text-[13px] hidden xs:inline-block">
+                      {item.period}
+                    </span>
+
+                    <motion.div
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="flex h-7 w-7 items-center justify-center rounded-full bg-foreground/4 text-foreground/60 transition-colors"
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </motion.div>
+                  </div>
+                </button>
+
+                {/* Expanded Detailed Content */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="details"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: transitionEase }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-4 pb-4 pt-1 sm:px-5 sm:pb-5 border-t border-foreground/6 mt-1">
+                        <span className="text-foreground/50 text-[11px] font-medium tracking-tight xs:hidden block mb-2">
+                          {item.period}
+                        </span>
+
+                        <p className="text-[14px] leading-relaxed text-foreground/80 sm:text-[15px]">
+                          {item.description}
+                        </p>
+
+                        {/* Bullet Highlights */}
+                        <div className="mt-3.5 space-y-1.5 rounded-2xl bg-foreground/2 p-3 sm:p-3.5 border border-foreground/4">
+                          <div className="flex items-center gap-1.5 text-[12px] font-medium text-foreground/75 mb-1.5">
+                            <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
+                            <span>Key Responsibilities & Impact</span>
+                          </div>
+                          <ul className="space-y-1.5 pl-1">
+                            {item.highlights.map((h, idx) => (
+                              <li
+                                key={idx}
+                                className="text-[13px] leading-relaxed text-foreground/70 flex items-start gap-2"
+                              >
+                                <span className="h-1.5 w-1.5 rounded-full bg-foreground/30 mt-2 shrink-0" />
+                                <span>{h}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Skills and Link */}
+                        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-1">
+                          <div className="flex flex-wrap gap-1.5">
+                            {item.skills.map((skill) => (
+                              <span
+                                key={skill}
+                                className="inline-flex items-center rounded-lg bg-foreground/5 px-2.5 py-1 text-[11px] font-medium text-foreground/80 border border-foreground/6"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+
+                          {item.link && (
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="focus-ring inline-flex items-center gap-1.5 rounded-xl bg-foreground px-3.5 py-1.5 text-[12px] font-medium text-background transition-opacity hover:opacity-90 shadow-2xs"
+                            >
+                              <span>{item.linkLabel || 'View Proof'}</span>
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
                   )}
-                </span>
+                </AnimatePresence>
+              </motion.li>
+            );
+          })}
+        </ul>
 
-                <div className="flex min-w-0 flex-col">
-                  <span className="text-foreground text-[17px] font-semibold tracking-tight sm:text-[18px]">
-                    {item.company}
-                  </span>
-                  <span className="text-foreground/65 mt-0.5 text-[14px] tracking-tight sm:text-[15px]">
-                    {item.role}
-                    <span className="text-foreground/30 mx-2">•</span>
-                    <span className="text-foreground/55">{item.period}</span>
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        <AnimatePresence>
-          {!isExpanded && (
-            <motion.div
-              key="fade"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0"
-              style={{
-                height: 64,
-                backdropFilter: 'blur(10px)',
-                WebkitBackdropFilter: 'blur(10px)',
-                maskImage: 'linear-gradient(to bottom, transparent 0%, black 80%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 80%)',
-              }}
-            />
-          )}
-        </AnimatePresence>
-
-        {remainingCount > 0 && (
+        {experienceData.length > 4 && (
           <button
             type="button"
-            onClick={() => setIsExpanded(!isExpanded)}
-            aria-expanded={isExpanded}
-            className={`focus-ring text-foreground flex w-full cursor-pointer items-center justify-center gap-1.5 bg-transparent text-[15px] font-medium tracking-tight ${
-              isExpanded ? 'relative mt-4' : 'absolute inset-x-0 bottom-0 z-10 py-3 sm:py-4'
-            }`}
+            onClick={() => setShowAll(!showAll)}
+            className="focus-ring text-foreground mt-3 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-2xl bg-background/50 py-2.5 text-[13px] font-medium tracking-tight transition-colors hover:bg-background shadow-2xs border border-foreground/5"
           >
-            {isExpanded ? 'Show less' : `Show ${remainingCount} more`}
-            <motion.span
-              animate={{ rotate: isExpanded ? 180 : 0 }}
-              transition={{ duration: 0.25 }}
-              className="inline-flex"
-            >
-              <ChevronDown className="h-4 w-4" aria-hidden="true" />
-            </motion.span>
+            <span>{showAll ? 'Show less' : `Show ${experienceData.length - 4} more experiences`}</span>
+            <ChevronDown
+              className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                showAll ? 'rotate-180' : ''
+              }`}
+            />
           </button>
         )}
       </div>
